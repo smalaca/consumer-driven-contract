@@ -114,7 +114,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <testFramework>JUNIT5</testFramework>
-                    <baseClassForTests>com.smalaca.productmanagement.ProducerContractTestClass</baseClassForTests>
+                    <packageWithBaseClasses>com.smalaca.productmanagement.contracts</packageWithBaseClasses>
                 </configuration>
             </plugin>
 

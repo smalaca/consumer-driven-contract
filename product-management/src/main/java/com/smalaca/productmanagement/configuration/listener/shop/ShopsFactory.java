@@ -18,5 +18,6 @@ public class ShopsFactory {
     public void listen(ContextRefreshedEvent event) {
         repository.save(new Shop(13L, "Lucky Number"));
         repository.save(new Shop(42L, "Answer for everything"));
+        repository.save(new Shop(111L, "Yet another shop"));
     }
 }
