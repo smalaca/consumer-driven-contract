@@ -11,9 +11,9 @@ Contract.make {
             contentType(applicationJson())
         }
         body(
-            login: "smalaca",
-            group: "Group One",
-            password: "xyz"
+            login: value(consumer(alphaNumeric())),
+            group: "Spider Verse",
+            password: value(consumer(alphaNumeric()))
         )
     }
     response {
