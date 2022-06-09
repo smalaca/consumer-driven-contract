@@ -1,4 +1,4 @@
-package com.smalaca.usermanagement;
+package com.smalaca.usermanagement.contracts;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.context.WebApplicationContext;
 
 @SpringBootTest
-public class ProducerContractTestClass {
+public class StartBase {
     @Autowired
     private WebApplicationContext context;
 

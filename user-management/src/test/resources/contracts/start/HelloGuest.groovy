@@ -1,15 +1,15 @@
-package contracts.producer
+package contracts.start
 
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {
-    description "Hello steve"
+    description "Hello guest"
     request {
         method GET()
-        url("/start/steve")
+        url("/start")
     }
     response {
-        body("Hello steve!")
+        body("Hello guest!")
         status OK()
     }
 }
