@@ -1,14 +1,23 @@
 package com.smalaca.productmanagementconsumer.infrastructure.productmanagement.producer;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
+import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@SpringBootTest
+@AutoConfigureStubRunner(
+        ids = {"com.smalaca:product-management:+:stubs:8200"},
+        stubsMode = StubRunnerProperties.StubsMode.LOCAL)
 class ProductManagementProducerFindAllProductsTest {
-    private final ProductManagementProducer producer = new ProductManagementProducerFactory().productManagementProducer();
+    @Autowired
+    private ProductManagementProducer producer;
 
     @Test
     void shouldReturnProductsForGivenShop() {
