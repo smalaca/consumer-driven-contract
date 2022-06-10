@@ -33,11 +33,11 @@ public class UserDto {
 
         UserDto userDto = (UserDto) o;
 
-        return new EqualsBuilder().append(id, userDto.id).append(login, userDto.login).append(group, userDto.group).isEquals();
+        return new EqualsBuilder().append(login, userDto.login).append(group, userDto.group).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(login).append(group).toHashCode();
+        return new HashCodeBuilder(17, 37).append(login).append(group).toHashCode();
     }
 }
